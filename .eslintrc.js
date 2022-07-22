@@ -25,6 +25,7 @@ module.exports = {
     // 'eslint-plugin-import': 'off',
     'import/no-unresolved': 'off',
     'import/extensions': 'off',
+    'jsx-a11y/mouse-events-have-key-events': 'off',
 
   },
 };
