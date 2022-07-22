@@ -26,6 +26,8 @@ module.exports = {
     'import/no-unresolved': 'off',
     'import/extensions': 'off',
     'jsx-a11y/mouse-events-have-key-events': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
+    'no-unused-vars': 'off',
 
   },
 };

@@ -1,5 +1,6 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React, { useRef, useEffect, useState } from 'react';
-// ? si ginifie si classList existe dans current
+// import { Link } from 'react-router-dom';
 
 function Landing() {
   //
@@ -8,6 +9,7 @@ function Landing() {
 
   //
   useEffect(() => {
+    // ? si ginifie si classList existe dans current
     refWolverine.current?.classList.add('startingImg');
     setTimeout(() => {
       refWolverine.current?.classList.remove('startingImg');
@@ -38,6 +40,7 @@ function Landing() {
           className="btn-welcome"
           onMouseOver={() => { setLeftImg(); }}
           onMouseOut={() => { clearImg(); }}
+
         >
           Inscription
 
@@ -49,6 +52,7 @@ function Landing() {
           className="btn-welcome"
           onMouseOver={() => { setRigthImg(); }}
           onMouseOut={() => { clearImg(); }}
+
         >
           Connexion
 

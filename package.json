@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
@@ -25,5 +26,17 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "typescript": "^4.6.3",
     "vite": "^2.9.9"
-  }
+  },
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mimi-max/marvel-quizz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mimi-max/marvel-quizz/issues"
+  },
+  "homepage": "https://github.com/mimi-max/marvel-quizz#readme",
+  "description": ""
 }
