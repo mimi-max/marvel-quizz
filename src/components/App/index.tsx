@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import '../../App.css';
 import Header from '../Header/index';
 import Landing from '../Landing/index';
@@ -10,17 +10,17 @@ import ErrorPage from '../ErrorPage';
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
       <Header />
-      {/*  */}
-      <Welcome />
-      <Landing />
-      <Login />
-      <Signup />
-      <ErrorPage />
-      {/*  */}
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/welcome" element={<Welcome />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 

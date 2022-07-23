@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React, { useRef, useEffect, useState } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Landing() {
   //
@@ -35,28 +35,28 @@ function Landing() {
   const displayBtn = btn && (
     <>
       <div className="leftBox">
-        <button
+        <Link
           type="button"
           className="btn-welcome"
           onMouseOver={() => { setLeftImg(); }}
           onMouseOut={() => { clearImg(); }}
-
+          to="/signup"
         >
           Inscription
 
-        </button>
+        </Link>
       </div>
       <div className="rightBox">
-        <button
+        <Link
           type="button"
           className="btn-welcome"
           onMouseOver={() => { setRigthImg(); }}
           onMouseOut={() => { clearImg(); }}
-
+          to="/login"
         >
           Connexion
 
-        </button>
+        </Link>
       </div>
     </>
   );
