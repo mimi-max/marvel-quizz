@@ -1,7 +1,7 @@
-import app from 'firebase/app';
+import app, { auth } from 'firebase/app';
+import 'firebase/auth';
 
 //
-
 const Config = {
   apiKey: 'AIzaSyAw3LvIcOWFjvDiT7uHYPDdkoHFwrgowc4',
   authDomain: 'marvel-quiz-cc1b6.firebaseapp.com',
@@ -13,11 +13,22 @@ const Config = {
 };
 //
 class Firebase {
+  auth;
+
   constructor() {
     // app.initializeApp(Config);
     if (!app.apps.length) {
       app.initializeApp(Config);
+      this.auth = auth();
     }
   }
+
+  // inscription
+  signupUser = (email:string, password:string) => this.auth
+    ?.createUserWithEmailAndPassword(email, password);
+
+  // connexion
+  loginUser = (email:string, password:string) => this.auth
+    ?.signInWithEmailAndPassword(email, password);
 }
 export default Firebase;
