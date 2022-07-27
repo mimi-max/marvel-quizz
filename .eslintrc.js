@@ -29,6 +29,7 @@ module.exports = {
     'import/extensions': 'off',
     'no-unused-vars': 'off',
     'import/no-unresolved': 'off',
+    'jsx-a11y/label-has-for': 'off',
 
   },
   settings: {

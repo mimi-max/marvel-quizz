@@ -17,18 +17,24 @@ class Firebase {
 
   constructor() {
     // app.initializeApp(Config);
-    if (!app.apps.length) {
-      app.initializeApp(Config);
-      this.auth = auth();
-    }
+    // if (!app.apps.length) {
+    app.initializeApp(Config);
+    this.auth = app.auth();
+    // }
   }
 
   // inscription
-  signupUser = (email:string, password:string) => this.auth
-    ?.createUserWithEmailAndPassword(email, password);
+  signupUser(email:string, password:string) {
+   
+    return (this.auth as app.auth.Auth)
+      .createUserWithEmailAndPassword(email, password);
+  }
 
   // connexion
   loginUser = (email:string, password:string) => this.auth
     ?.signInWithEmailAndPassword(email, password);
+
+  // deconnexion
+  signoutUser = () => this.auth?.signOut();
 }
 export default Firebase;
