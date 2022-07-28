@@ -28,6 +28,18 @@ module.exports = {
     // 'eslint-plugin-import': 'off',
     'import/extensions': 'off',
     'no-unused-vars': 'off',
+    'import/no-unresolved': 'off',
+    'jsx-a11y/label-has-for': 'off',
+
   },
-  
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+      },
+    },
+  },
 };
