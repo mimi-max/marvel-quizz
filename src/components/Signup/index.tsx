@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState, useContext } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import { FirebaseContext } from '../Firebase';
 
 //
@@ -22,7 +23,7 @@ function Signup() {
   const [loginData, setLoginData] = useState < ILoginData>(data);
   const [error, setError] = useState<Error|null>(null);
   const consumerFirebase = useContext(FirebaseContext);
-
+  const navigate = useNavigate();
   //
   const {
     pseudo, email, password, confirmPassword,
@@ -39,6 +40,7 @@ function Signup() {
     consumerFirebase.signupUser(email, password).then(
       (user) => {
         setLoginData({ ...data });
+        navigate('/welcome');
       },
     ).catch((err:Error) => { setError(err); });
   };
@@ -78,7 +80,12 @@ function Signup() {
               </div>
               <button type="submit" disabled={isDisabled}>Inscription</button>
             </form>
+            <div className="linkcontainer">
+              <Link className="simpleLink" to="/login">
+                Déja inscrit? connectez-vous.
+              </Link>
 
+            </div>
           </div>
         </div>
       </div>
