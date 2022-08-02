@@ -21,7 +21,8 @@ class Firebase {
   }
 
   // inscription
-  signupUser(email:string, password:string) {
+
+  signupUser(email: string, password: string) {
     return (this.auth as app.auth.Auth)
       .createUserWithEmailAndPassword(email, password);
   }
