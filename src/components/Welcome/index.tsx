@@ -6,7 +6,7 @@ import { FirebaseContext } from '../Firebase';
 import Logout from '../Logout';
 
 function Welcome() {
-  const [userSession, setUserSession] = useState<null | firebase.User>(null);
+  const [userSession, setUserSession] = useState<null|firebase.User>(null);
   const consumerFirebase = useContext(FirebaseContext);
   const navigate = useNavigate();
 
